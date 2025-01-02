@@ -1,0 +1,99 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fleet_odometer_unit_count
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-26 11:31+0000\n"
+"PO-Revision-Date: 2025-12-26 11:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: fleet_odometer_unit_count
+#: model:ir.model.fields,field_description:fleet_odometer_unit_count.field_fleet_vehicle_odometer__difference
+msgid "Difference"
+msgstr "Diferencia"
+
+#. module: fleet_odometer_unit_count
+#: model_terms:ir.ui.view,arch_db:fleet_odometer_unit_count.fleet_vehicle_odometer_tree
+#: model_terms:ir.ui.view,arch_db:fleet_odometer_unit_count.fleet_vehicle_odometer_view_form
+msgid "End"
+msgstr "Final"
+
+#. module: fleet_odometer_unit_count
+#. odoo-python
+#: code:addons/fleet_odometer_unit_count/models/fleet_vehicle_odometer.py:0
+#: code:addons/slv-fleet/fleet_odometer_unit_count/models/fleet_vehicle_odometer.py:0
+#, python-format
+msgid ""
+"Final %(unit_display_name)s can't be lower than the initial "
+"%(unit_display_name)s"
+msgstr ""
+"Los %(unit_display_name)s final no pueden ser inferiores a los "
+"%(unit_display_name)s iniciales."
+
+#. module: fleet_odometer_unit_count
+#: model:ir.model,name:fleet_odometer_unit_count.model_fleet_vehicle_odometer
+msgid "Odometer log for a vehicle"
+msgstr "Registro del odómetro para un vehículo"
+
+#. module: fleet_odometer_unit_count
+#. odoo-python
+#: code:addons/fleet_odometer_unit_count/models/fleet_vehicle_odometer.py:0
+#: code:addons/slv-fleet/fleet_odometer_unit_count/models/fleet_vehicle_odometer.py:0
+#, python-format
+msgid ""
+"Odometer range %(start)s-%(end)s overlaps with existing record "
+"%(od_start)s-%(od_end)s for vehicle %(vehicle)s on %(date)s."
+msgstr ""
+"El rango del odómetro %(start)s-%(end)s se superpone con el registro "
+"%(od_start)s-%(od_end)s existente para el vehículo %(vehicle)s en %(date)s."
+
+#. module: fleet_odometer_unit_count
+#. odoo-python
+#: code:addons/fleet_odometer_unit_count/models/fleet_vehicle_odometer.py:0
+#: code:addons/slv-fleet/fleet_odometer_unit_count/models/fleet_vehicle_odometer.py:0
+#, python-format
+msgid ""
+"Odometer range %(start)s-%(end)s overlaps with next record "
+"%(od_start)s-%(od_end)s for vehicle %(vehicle)s on %(date)s."
+msgstr ""
+"El rango del odómetro %(start)s-%(end)s se superpone con el siguiente "
+"registro %(od_start)s-%(od_end)s para el vehículo %(vehicle)s en %(date)s."
+
+#. module: fleet_odometer_unit_count
+#. odoo-python
+#: code:addons/fleet_odometer_unit_count/models/fleet_vehicle_odometer.py:0
+#: code:addons/slv-fleet/fleet_odometer_unit_count/models/fleet_vehicle_odometer.py:0
+#, python-format
+msgid ""
+"Odometer range %(start)s-%(end)s overlaps with previous record "
+"%(od_start)s-%(od_end)s for vehicle %(vehicle)s on %(date)s."
+msgstr ""
+"El rango del odómetro %(start)s-%(end)s se superpone con el registro "
+"anterior %(od_start)s-%(od_end)s para el vehículo %(vehicle)s en %(date)s."
+
+#. module: fleet_odometer_unit_count
+#: model:ir.model.fields,field_description:fleet_odometer_unit_count.field_fleet_vehicle_odometer__start
+msgid "Start"
+msgstr "Inicio"
+
+#. module: fleet_odometer_unit_count
+#: model:ir.model,name:fleet_odometer_unit_count.model_fleet_vehicle
+msgid "Vehicle"
+msgstr "Vehículo"
+
+#. module: fleet_odometer_unit_count
+#. odoo-python
+#: code:addons/fleet_odometer_unit_count/models/fleet_vehicle.py:0
+#: code:addons/slv-fleet/fleet_odometer_unit_count/models/fleet_vehicle.py:0
+#, python-format
+msgid "You cannot change the driver of a vehicle with odometer history."
+msgstr ""
+"No se puede cambiar el conductor de un vehículo con historial de odómetro."

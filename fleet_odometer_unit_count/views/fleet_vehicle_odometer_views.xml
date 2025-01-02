@@ -1,0 +1,43 @@
+<odoo>
+    <record id="fleet_vehicle_odometer_tree" model="ir.ui.view">
+        <field name="name">fleet.vehicle.odometer.tree (in fleet_odometer_km_count)</field>
+        <field name="model">fleet.vehicle.odometer</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_odometer_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="value" position="before">
+                <field name="start" required="1"/>
+            </field>
+            <field name="value" position="after">
+                <field name="difference"/>
+            </field>
+            <xpath expr="//field[@name='value']" position="attributes">
+                <attribute name="string">End</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="fleet_vehicle_odometer_view_form" model="ir.ui.view">
+        <field name="name">fleet.vehicle.odometer.form (in fleet_odometer_km_count)</field>
+        <field name="model">fleet.vehicle.odometer</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_odometer_view_form"/>
+        <field name="arch" type="xml">
+            <field name="vehicle_id" position="after">
+                <label for ="start"/>
+                <div class="o_row">
+                    <field name="start" required="1" class="oe_inline"/>
+                    <field name="unit" class="ms-2"/>
+                </div>
+            </field>
+            <field name="date" position="before">
+                <label for ="difference"/>
+                <div class="o_row">
+                    <field name="difference" class="oe_inline"/>
+                    <field name="unit" class="ms-2"/>
+                </div>
+            </field>
+            <xpath expr="//field[@name='value']" position="attributes">
+                <attribute name="string">End</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
