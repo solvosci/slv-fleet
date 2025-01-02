@@ -1,0 +1,29 @@
+<odoo>
+    <record id="fleet_vehicle_view_form" model="ir.ui.view">
+        <field name="name">fleet.vehicle.form (in fleet_odometer_km_count)</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+        <field name="arch" type="xml">
+            <field name="odometer" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="odometer_unit" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="future_driver_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="fleet_vehicle_view_tree" model="ir.ui.view">
+        <field name="name">fleet.vehicle.tree (in fleet_odometer_km_count)</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="future_driver_id" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>

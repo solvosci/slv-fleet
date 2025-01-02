@@ -1,0 +1,1 @@
+This addon adds a start field to vehicle odometers which, together with the existing value field, automatically calculates the traveled distance in the corresponding unit. It also enforces a vehicle-level restriction that prevents changing the driver once the vehicle has odometer history, ensuring data consistency and traceability.
