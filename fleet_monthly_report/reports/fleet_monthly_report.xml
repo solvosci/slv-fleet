@@ -1,0 +1,13 @@
+<odoo>
+
+    <record id="action_fleet_monthly_report" model="ir.actions.report">
+        <field name="name">Fleet Montlhy Report </field>
+        <field name="model">fleet.monthly.report.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">fleet_monthly_report.fleet_monthly_template</field>
+        <field name="report_file">fleet_monthly_report.fleet_monthly_template</field>
+        <field name="binding_model_id" ref="model_fleet_monthly_report_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

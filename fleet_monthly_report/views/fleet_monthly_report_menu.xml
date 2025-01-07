@@ -1,0 +1,11 @@
+<odoo>
+    
+    <menuitem
+        id="menu_fleet_monthly_reporting"
+        name="Monthly Report"
+        parent="fleet.menu_fleet_reporting"
+        action="action_fleet_monthly_report_wizard"
+        sequence="2"
+        groups="fleet.fleet_group_manager"/>
+
+</odoo>
