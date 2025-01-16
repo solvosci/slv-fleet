@@ -26,7 +26,37 @@
                                 <t t-esc="month"/>
                             </div>
                         </div>
-                        <div class="col-12 align-center" style="border: 2px solid black; background-color: lightgray;">
+                        <table style="width: 100%; border-collapse: collapse; border: 1px solid black;">
+                            <thead style="border: 2px solid black; background-color: lightgray;">
+                                <tr>
+                                    <th style="border: 1px solid black; text-align: center; padding: 5px;">DAY</th>
+                                    <th style="border: 1px solid black; text-align: center; padding: 5px;">LICENSE PLATE</th>
+                                    <th style="border: 1px solid black; text-align: center; padding: 5px;">INITIAL</th>
+                                    <th style="border: 1px solid black; text-align: center; padding: 5px;">FINAL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="odometer_ids_filter" t-as="odometer">
+                                    <tr style="page-break-inside: avoid; border: 1px solid black;">
+                                        <td style="text-align: center; border: 1px solid black; padding: 5px;">
+                                            <span t-field="odometer.date"/>
+                                        </td>
+                                        <td style="text-align: center; border: 1px solid black; padding: 5px;">
+                                            <span t-field="odometer.vehicle_id.license_plate"/>
+                                        </td>
+                                        <td style="text-align: right; border: 1px solid black; padding: 5px;">
+                                            <span t-field="odometer.start" t-options="{'widget': 'float', 'precision': 2}"/> 
+                                            <span t-field="odometer.unit"/>
+                                        </td>
+                                        <td style="text-align: right; border: 1px solid black; padding: 5px;">
+                                            <span t-field="odometer.value" t-options="{'widget': 'float', 'precision': 2}"/> 
+                                            <span t-field="odometer.unit"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <!-- <div class="col-12 align-center" style="border: 2px solid black; background-color: lightgray;page-break-inside; avoid">
                             <span class="d-flex justify-content-center">
                                 <div class="col-3" style="border-right: 2px solid black;">
                                     <span class="d-block text-center"><strong>DAY</strong></span>
@@ -43,25 +73,25 @@
                             </span>
                             <t t-foreach="odometer_ids_filter" t-as="odometer">
                                 <div class="row bg-white" style="border-bottom: 2px solid black;">
-                                    <span class="d-flex justify-content-center">
-                                        <div class="col-3 text-center" style="border-right: 2px solid black;">
+                                    <span class="d-flex justify-content-center" style=" page-break-inside; avoid">
+                                        <div class="col-3 text-center" style="border-right: 2px solid black; padding: 2px;">
                                             <span t-field="odometer.date"/>
                                         </div>
-                                        <div class="col-3 text-center" style="border-right: 2px solid black;">
+                                        <div class="col-3 text-center" style="border-right: 2px solid black; padding: 2px;">
                                             <span t-field="odometer.vehicle_id.license_plate"/>
                                         </div>
-                                        <div class="col-3 text-end" style="border-right: 2px solid black;">
-                                            <span t-field="odometer.start" t-options="{'widget': 'float', 'precision': 2}"/> 
+                                        <div class="col-3 text-end" style="border-right: 2px solid black; padding: 2px;">
+                                            <span t-field="odometer.start" t-options="{'widget': 'float', 'precision': 2} "/> 
                                             <span t-field="odometer.unit"/>
                                         </div>
-                                        <div class="col-3 text-end">
+                                        <div class="col-3 text-end" style="padding: 2px;">
                                             <span t-field="odometer.value" t-options="{'widget': 'float', 'precision': 2}"/> 
                                             <span t-field="odometer.unit"/>
                                         </div>
                                     </span>
                                 </div>
                             </t>
-                        </div>
+                        </div> -->
                     </div>
                 </t>
             </t>

@@ -6,34 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-15 15:50+0000\n"
-"PO-Revision-Date: 2025-01-15 15:50+0000\n"
+"POT-Creation-Date: 2025-01-16 11:32+0000\n"
+"PO-Revision-Date: 2025-01-16 11:32+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-
-#. module: fleet_monthly_report
-#: model_terms:ir.ui.view,arch_db:fleet_monthly_report.fleet_monthly_template
-msgid "<span class=\"d-block text-center\"><strong>DAY</strong></span>"
-msgstr "<span class=\"d-block text-center\"><strong>DÍA</strong></span>"
-
-#. module: fleet_monthly_report
-#: model_terms:ir.ui.view,arch_db:fleet_monthly_report.fleet_monthly_template
-msgid "<span class=\"d-block text-center\"><strong>FINAL</strong></span>"
-msgstr ""
-
-#. module: fleet_monthly_report
-#: model_terms:ir.ui.view,arch_db:fleet_monthly_report.fleet_monthly_template
-msgid "<span class=\"d-block text-center\"><strong>INITIAL</strong></span>"
-msgstr "<span class=\"d-block text-center\"><strong>INICIAL</strong></span>"
-
-#. module: fleet_monthly_report
-#: model_terms:ir.ui.view,arch_db:fleet_monthly_report.fleet_monthly_template
-msgid "<span class=\"d-block text-center\"><strong>LICENSE PLATE</strong></span>"
-msgstr "<span class=\"d-block text-center\"><strong>MATRÍCULA</strong></span>"
 
 #. module: fleet_monthly_report
 #: model_terms:ir.ui.view,arch_db:fleet_monthly_report.view_fleet_monthly_report_wizard
@@ -51,6 +31,11 @@ msgid "Created on"
 msgstr "Creado el"
 
 #. module: fleet_monthly_report
+#: model_terms:ir.ui.view,arch_db:fleet_monthly_report.fleet_monthly_template
+msgid "DAY"
+msgstr "DÍA"
+
+#. module: fleet_monthly_report
 #: model:ir.model.fields,field_description:fleet_monthly_report.field_fleet_monthly_report_wizard__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
@@ -66,6 +51,11 @@ msgid "Enter a year in the format 19xx or 20xx."
 msgstr "Introduce un año en el formato 19xx o 20xx"
 
 #. module: fleet_monthly_report
+#: model_terms:ir.ui.view,arch_db:fleet_monthly_report.fleet_monthly_template
+msgid "FINAL"
+msgstr "FINAL"
+
+#. module: fleet_monthly_report
 #: model:ir.actions.report,name:fleet_monthly_report.action_fleet_monthly_report
 msgid "Fleet Montlhy Report "
 msgstr "Informe mensual de flota"
@@ -74,6 +64,16 @@ msgstr "Informe mensual de flota"
 #: model:ir.model.fields,field_description:fleet_monthly_report.field_fleet_monthly_report_wizard__id
 msgid "ID"
 msgstr ""
+
+#. module: fleet_monthly_report
+#: model_terms:ir.ui.view,arch_db:fleet_monthly_report.fleet_monthly_template
+msgid "INITIAL"
+msgstr "INICIAL"
+
+#. module: fleet_monthly_report
+#: model_terms:ir.ui.view,arch_db:fleet_monthly_report.fleet_monthly_template
+msgid "LICENSE PLATE"
+msgstr "MATRÍCULA"
 
 #. module: fleet_monthly_report
 #: model:ir.model.fields,field_description:fleet_monthly_report.field_fleet_monthly_report_wizard__write_uid

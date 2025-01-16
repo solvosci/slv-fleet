@@ -10,7 +10,7 @@
     "website": "https://github.com/solvosci/slv-fleet",
     "depends": [
         "fleet",
-        "fleet_odometer_km_count"
+        "fleet_odometer_unit_count"
     ],
     "data": [
         "security/ir.model.access.csv",
