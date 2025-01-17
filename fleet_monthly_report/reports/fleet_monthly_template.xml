@@ -14,16 +14,20 @@
                 </t>
                 <t t-foreach="partner_ids" t-as="partner">
                     <t t-set="odometer_ids_filter" t-value="sorted(o.odometer_ids.filtered(lambda o: o.driver_id.id == partner.id), key=lambda odometer: (odometer.date, odometer.vehicle_id.license_plate, odometer.start))"/>
+                    <t t-set="unique_units" t-value="list(set(dict(odometer.vehicle_id._fields['odometer_unit'].selection).get(odometer.unit) for odometer in odometer_ids_filter))"/>
                     <div class="page" style="page-break-after: always;">
                         <div class="text-center">
-                            <h2>Monthly Report</h2>
+                            <h3>Monthly Report</h3>
                         </div>
                         <div class="row mb-3 d-flex justify-content-around text-center">
-                            <div class="col-6" style="font-size: 26px;">
+                            <div class="col-4" style="font-size: 26px;">
                                 <t t-esc="partner.name"/>
                             </div>
-                            <div class="col-6" style="font-size: 26px;">
+                            <div class="col-4" style="font-size: 26px;">
                                 <t t-esc="month"/>
+                            </div>
+                            <div class="col-4" t-if="len(unique_units) == 1" style="font-size: 26px;">
+                                <t>Unit: </t><t t-esc="unique_units[0]"/>
                             </div>
                         </div>
                         <table style="width: 100%; border-collapse: collapse; border: 1px solid black;">
@@ -33,6 +37,7 @@
                                     <th style="border: 1px solid black; text-align: center; padding: 5px;">LICENSE PLATE</th>
                                     <th style="border: 1px solid black; text-align: center; padding: 5px;">INITIAL</th>
                                     <th style="border: 1px solid black; text-align: center; padding: 5px;">FINAL</th>
+                                    <th style="border: 1px solid black; text-align: center; padding: 5px;" t-if="len(unique_units) > 1">UNIT</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -46,52 +51,17 @@
                                         </td>
                                         <td style="text-align: right; border: 1px solid black; padding: 5px;">
                                             <span t-field="odometer.start" t-options="{'widget': 'float', 'precision': 2}"/> 
-                                            <span t-field="odometer.unit"/>
                                         </td>
                                         <td style="text-align: right; border: 1px solid black; padding: 5px;">
                                             <span t-field="odometer.value" t-options="{'widget': 'float', 'precision': 2}"/> 
+                                        </td>
+                                        <td style="text-align: center; border: 1px solid black; padding: 5px;" t-if="len(unique_units) > 1">
                                             <span t-field="odometer.unit"/>
                                         </td>
                                     </tr>
                                 </t>
                             </tbody>
                         </table>
-                        <!-- <div class="col-12 align-center" style="border: 2px solid black; background-color: lightgray;page-break-inside; avoid">
-                            <span class="d-flex justify-content-center">
-                                <div class="col-3" style="border-right: 2px solid black;">
-                                    <span class="d-block text-center"><strong>DAY</strong></span>
-                                </div>
-                                <div class="col-3" style="border-right: 2px solid black;">
-                                    <span class="d-block text-center"><strong>LICENSE PLATE</strong></span>
-                                </div>
-                                <div class="col-3" style="border-right: 2px solid black;">
-                                    <span class="d-block text-center"><strong>INITIAL</strong></span>
-                                </div>
-                                <div class="col-3">
-                                    <span class="d-block text-center"><strong>FINAL</strong></span>
-                                </div>
-                            </span>
-                            <t t-foreach="odometer_ids_filter" t-as="odometer">
-                                <div class="row bg-white" style="border-bottom: 2px solid black;">
-                                    <span class="d-flex justify-content-center" style=" page-break-inside; avoid">
-                                        <div class="col-3 text-center" style="border-right: 2px solid black; padding: 2px;">
-                                            <span t-field="odometer.date"/>
-                                        </div>
-                                        <div class="col-3 text-center" style="border-right: 2px solid black; padding: 2px;">
-                                            <span t-field="odometer.vehicle_id.license_plate"/>
-                                        </div>
-                                        <div class="col-3 text-end" style="border-right: 2px solid black; padding: 2px;">
-                                            <span t-field="odometer.start" t-options="{'widget': 'float', 'precision': 2} "/> 
-                                            <span t-field="odometer.unit"/>
-                                        </div>
-                                        <div class="col-3 text-end" style="padding: 2px;">
-                                            <span t-field="odometer.value" t-options="{'widget': 'float', 'precision': 2}"/> 
-                                            <span t-field="odometer.unit"/>
-                                        </div>
-                                    </span>
-                                </div>
-                            </t>
-                        </div> -->
                     </div>
                 </t>
             </t>
