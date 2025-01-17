@@ -13,10 +13,10 @@
         "fleet_odometer_unit_count"
     ],
     "data": [
-        "security/ir.model.access.csv",
         "wizard/fleet_monthly_report_wizard_view.xml",
-        "views/fleet_monthly_report_menu.xml",
+        "security/ir.model.access.csv",
         "reports/fleet_monthly_report.xml",
         "reports/fleet_monthly_template.xml",
+        "views/fleet_monthly_report_menu.xml",
     ],
 }
