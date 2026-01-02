@@ -1,0 +1,34 @@
+<odoo>
+
+    <record id="view_fleet_monthly_report_wizard" model="ir.ui.view">
+        <field name="name">fleet.monthly.report.wizard.form</field>
+        <field name="model">fleet.monthly.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string = "Monthly driver report">
+                <group>
+                    <group>
+                        <field name="partner_ids" string="Driver" widget="many2many_tags"/>
+                    </group>
+                    <group>
+                        <field name="month"/>
+                        <field name="year"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_fleet_monthly_report" type="object" string="Print" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_fleet_monthly_report_wizard" model="ir.actions.act_window">
+        <field name="name">Monthly Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">fleet.monthly.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_fleet_monthly_report_wizard"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

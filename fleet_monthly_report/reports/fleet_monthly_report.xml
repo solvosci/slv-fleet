@@ -1,0 +1,30 @@
+<odoo>
+
+    <record id="action_fleet_monthly_report" model="ir.actions.report">
+        <field name="name">Fleet Montlhy Report </field>
+        <field name="model">fleet.monthly.report.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="paperformat_id" ref="fleet_monthly_report.monthly_report_paperform"/>
+        <field name="report_name">fleet_monthly_report.fleet_monthly_template</field>
+        <field name="report_file">fleet_monthly_report.fleet_monthly_template</field>
+        <field name="binding_model_id" ref="model_fleet_monthly_report_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="monthly_report_paperform" model="report.paperformat">
+        <field name="name">Fleet Monthly Reports</field>
+        <field name="format">custom</field>
+        <field name="page_height">297</field>
+        <field name="page_width">210</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">11</field>
+        <field name="margin_bottom">20</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">0</field>
+        <field name="dpi">90</field>
+        <field name="disable_shrinking" eval="True"/>
+    </record>
+    
+</odoo>
